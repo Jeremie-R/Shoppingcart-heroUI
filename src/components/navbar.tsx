@@ -33,7 +33,7 @@ export const Navbar = () => {
        </NavbarItem>
       </NavbarContent>
 
-      <Button color="primary" variant="bordered">Cart</Button>
+      <Button color="primary" variant="bordered">Cart (3)</Button>
 
     </HeroUINavbar>
   );
