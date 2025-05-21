@@ -27,7 +27,7 @@ export function StoreItem({ id, name, price, imgUrl}: StoreItemProps) {
                     style={{ objectFit: "cover" }}
                 />
                 <CardHeader className="pb-2 pt-4 px-4 flex-row justify-between align-items">
-                    <h4 className="fs-2">{name}</h4>
+                    <h3 className="text-large font-medium mt-2">{name}</h3>
                     <p className="text-small text-default-500">{formatCurrency(price)}</p>
                 </CardHeader>
                 <CardBody className="overflow-visible py-4">
