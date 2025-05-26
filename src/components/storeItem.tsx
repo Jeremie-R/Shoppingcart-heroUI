@@ -1,6 +1,8 @@
 import { formatCurrency } from "../utilities/formatCurrency";
 import {Card, CardHeader, CardBody, Image} from "@heroui/react";
 import {Button, ButtonGroup} from "@heroui/button";
+import { useShoppingCart } from "../context/ShoppingCartContext";
+
 
 
 
@@ -13,7 +15,14 @@ type StoreItemProps = {
 
 export function StoreItem({ id, name, price, imgUrl}: StoreItemProps) {
 
-    const quantity = 0;
+    const { 
+        getItemQuantity, 
+        increaseCartQuantity, 
+        decreaseCartQuantity, 
+        removeFromCart
+    } = useShoppingCart()
+    
+    const quantity = getItemQuantity(id);
 
     return (
         <>
@@ -32,24 +41,24 @@ export function StoreItem({ id, name, price, imgUrl}: StoreItemProps) {
                 </CardHeader>
                 <CardBody className="overflow-visible py-4">
                 
-                {quantity === 1 ? (
+                {quantity === 0 ? (
                     //no item in cart
-                    <Button color="primary">+ Add to Cart</Button>
+                    <Button color="primary" onClick={() => increaseCartQuantity(id)}>+ Add to Cart</Button>
 
                     ): ( <div className="flex items-center justify-center w-full flex-col" style={{gap: "0.5rem"}}>
                         {/* some item in cart */}
                         <div className="flex items-center justify-center w-full" style={{gap: "0.5rem"}}>
                             
-                            <Button>-</Button>
+                            <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                             <div>
                                 <span className="">{quantity}</span> in cart
                             </div>
-                            <Button>+</Button>
+                            <Button onClick={() => increaseCartQuantity(id)}>+</Button>
 
 
                         </div>
 
-                        <Button color="danger" variant="bordered">Remove</Button>
+                        <Button color="danger" variant="bordered" onClick={() => removeFromCart(id)}>Remove</Button>
 
 
                         
