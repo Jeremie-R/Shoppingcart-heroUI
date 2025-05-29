@@ -7,6 +7,7 @@ import {
 
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
+import { Badge } from "@heroui/react";
 import { useShoppingCart } from '../context/ShoppingCartContext'
 
 
@@ -38,7 +39,9 @@ export const Navbar = () => {
        </NavbarItem>
       </NavbarContent>
 
-      <Button color="primary" variant="bordered" onClick={openCart}>Cart ({cartQuantity})</Button>
+      <Badge color="primary" content={cartQuantity}>
+        <Button color="primary" variant="bordered" onClick={openCart}>Cart</Button>
+      </Badge>
 
     </HeroUINavbar>
   );
