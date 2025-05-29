@@ -17,7 +17,7 @@ export default function StorePage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block text-center justify-center">
+        <div className="flex flex-col inline-block text-center justify-center gap-4">
           <h1 className={title()}>Store</h1>
 
 
@@ -28,7 +28,7 @@ export default function StorePage() {
           </div>
 
          
-          <Table>
+          {/* <Table>
             <TableHeader>
               <TableColumn>Name</TableColumn>
               <TableColumn>Price</TableColumn>
@@ -41,7 +41,7 @@ export default function StorePage() {
                 </TableRow>
               ))}
             </TableBody>
-          </Table>
+          </Table> */}
 
         </div>
       </section>
