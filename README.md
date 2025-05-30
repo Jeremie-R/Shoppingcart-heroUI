@@ -3,9 +3,9 @@ Project to learn react in real development application and try using a react lib
 
 ---
 
-[see project]()
+[see project](https://roberrini-shoppingcart-heroui.netlify.app/)
 
-[![image](./public/ProjectDemo.png)]()
+[![image](./public/ProjectDemo.png)](https://roberrini-shoppingcart-heroui.netlify.app/)
 
 
 ---
