@@ -1,4 +1,3 @@
-import { Link } from "@heroui/link";
 import { ShoppingCartProvider } from "@/context/ShoppingCartContext";
 
 import { Navbar } from "@/components/navbar";

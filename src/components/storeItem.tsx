@@ -1,6 +1,6 @@
 import { formatCurrency } from "../utilities/formatCurrency";
 import {Card, CardHeader, CardBody, Image} from "@heroui/react";
-import {Button, ButtonGroup} from "@heroui/button";
+import { Button } from "@heroui/button";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 

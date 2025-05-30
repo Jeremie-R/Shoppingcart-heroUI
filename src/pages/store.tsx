@@ -2,15 +2,7 @@ import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import storeItems from "../data/items.json";
 import { StoreItem } from "@/components/storeItem";
-import {
-  Table,
-  TableHeader,
-  TableColumn,
-  TableBody,
-  TableRow,
-  TableCell,
-  getKeyValue,
-} from "@heroui/react";
+
 
 
 export default function StorePage() {
@@ -28,20 +20,7 @@ export default function StorePage() {
           </div>
 
          
-          {/* <Table>
-            <TableHeader>
-              <TableColumn>Name</TableColumn>
-              <TableColumn>Price</TableColumn>
-            </TableHeader>
-            <TableBody>
-              {storeItems.map((item, idx) => (
-                <TableRow key={idx}>
-                  <TableCell>{item.name}</TableCell>
-                  <TableCell>{item.price}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table> */}
+          
 
         </div>
       </section>
